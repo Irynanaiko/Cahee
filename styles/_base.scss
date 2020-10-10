@@ -1,4 +1,4 @@
-/* RESET Styles */
+/* BASE */
 body,
 p,
 h2,
@@ -6,15 +6,12 @@ h1 {
     margin: 0;
 }
 
-/* BASE */
 * {
     box-sizing: border-box;
 }
 
 :root {
     font-family: 'Roboto', sans-serif;
-    --main-color: #262626;
-    --accent-color: #fff;
     scroll-behavior: smooth;
 }
 
@@ -25,7 +22,6 @@ body {
     line-height: 27px;
     margin: 0;
     width: 1500px;
-    /* height: 866px; */
 }
 
 * {
@@ -39,13 +35,13 @@ body {
     margin-top: 60px;
     font-size: 20px;
     line-height: 27px;
-    color: var(--accent-color);
+    color: $accent-color;
     font-weight: 300;
     border: none;
     cursor: pointer;
-}
 
-.btn:focus {
-    border: none;
-    outline: none;
+    &:focus {
+        border: none;
+        outline: none;
+    }
 }
