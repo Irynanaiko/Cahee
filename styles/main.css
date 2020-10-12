@@ -24,6 +24,12 @@ body {
   margin: 0;
   width: 1500px;
 }
+@media screen and (max-width: 576px) {
+  html,
+body {
+    width: 100%;
+  }
+}
 
 * {
   transition: all 0.1s easy-in;
@@ -79,6 +85,28 @@ body {
   font-weight: 400;
   font-family: "Pacifico", cursive;
 }
+.header__toggle-btn {
+  display: none;
+  font-size: 32px;
+  color: #262626;
+  cursor: pointer;
+}
+.header__toggle-btn:hover {
+  color: #0d0d0d;
+}
+.header__toggle-btn .hamburger-menu {
+  display: inline-block;
+}
+.header__toggle-btn .close {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .header__toggle-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 270px;
+  }
+}
 
 .nav {
   margin: 0 auto;
@@ -96,7 +124,6 @@ body {
 .nav__link {
   width: 100px;
   height: 15px;
-  height: 15px;
   font-size: 16px;
   line-height: 25px;
   color: #262626;
@@ -109,12 +136,27 @@ body {
 .nav__link:hover {
   border-top: 3px solid #ff6033;
 }
+@media screen and (max-width: 576px) {
+  .nav {
+    display: none;
+  }
+}
 
 .big-screen__wrapper {
   padding: 110px 70px;
 }
+@media screen and (max-width: 576px) {
+  .big-screen__wrapper {
+    text-align: center;
+  }
+}
 .big-screen__title {
   color: #262626;
+}
+@media screen and (max-width: 576px) {
+  .big-screen__title {
+    line-height: 80px;
+  }
 }
 .big-screen__subtitle {
   width: 370px;
@@ -122,28 +164,52 @@ body {
   color: #262626;
   padding-top: 30px;
 }
+@media screen and (max-width: 576px) {
+  .big-screen__subtitle {
+    margin-bottom: 50px;
+  }
+}
 .big-screen__button {
   background-color: #ff6033;
 }
 
 .scroll {
   text-align: center;
-  padding: 110px 30px;
 }
 
 .container-about {
   background-image: radial-gradient(circle at center, #00c3c3 0%, #00b8b7 32%, #00afae 68%, #009f9f 100%);
   display: flex;
 }
+@media screen and (max-width: 576px) {
+  .container-about {
+    text-align: center;
+  }
+}
 .container-about__title {
   color: #fff;
   padding-top: 210px;
+}
+@media screen and (max-width: 576px) {
+  .container-about__title {
+    font-size: 40px;
+  }
 }
 .container-about__subtitle {
   width: 500px;
   height: 202px;
   color: #fff;
   margin-top: 30px;
+}
+@media screen and (max-width: 576px) {
+  .container-about__subtitle {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-about__img {
+    width: 400%;
+  }
 }
 
 .container-services {
@@ -154,13 +220,46 @@ body {
   color: #fff;
   position: relative;
 }
+@media screen and (max-width: 576px) {
+  .container-services {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-services__text {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-services .service-img {
+    width: 150px;
+  }
+}
 .container-services__wrapper {
   margin: 80px 0;
+}
+@media screen and (max-width: 576px) {
+  .container-services__wrapper {
+    margin: 0 auto;
+    padding: 20px 0;
+  }
 }
 .container-services__title {
   position: absolute;
   margin: 0;
   top: 50%;
+}
+@media screen and (max-width: 576px) {
+  .container-services__title {
+    font-size: 40px;
+    display: inline-block;
+    position: static;
+  }
 }
 .container-services__list {
   list-style-type: none;
@@ -189,6 +288,11 @@ body {
 .container-services__item:not(:last-child) {
   margin-bottom: 10px;
 }
+@media screen and (max-width: 576px) {
+  .container-services__item {
+    font-size: 16px;
+  }
+}
 
 .icon {
   height: 100px;
@@ -200,15 +304,24 @@ body {
   margin: auto;
   right: 0;
 }
+@media screen and (max-width: 576px) {
+  .icon {
+    font-size: 32px;
+  }
+}
 
 .container-gallery {
   background-color: #ffe92f;
   padding-top: 45px;
   position: relative;
-  height: 1536px;
 }
 .container-gallery__title {
   text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .container-gallery__title {
+    font-size: 40px;
+  }
 }
 .container-gallery__subtitle {
   width: 630px;
@@ -216,6 +329,12 @@ body {
   text-align: center;
   padding: 40px 0px;
   margin: 0 auto;
+}
+@media screen and (max-width: 576px) {
+  .container-gallery__subtitle {
+    font-size: 14px;
+    width: 80%;
+  }
 }
 .container-gallery__img {
   display: flex;
@@ -225,6 +344,37 @@ body {
 }
 .container-gallery__img-1 {
   display: flex;
+}
+@media screen and (max-width: 576px) {
+  .container-gallery__img-1 {
+    flex-direction: column;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-gallery__img01 {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-gallery__img02 {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-gallery__img03 {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-gallery__img04 {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-gallery__img05 {
+    width: 400px;
+  }
 }
 .container-gallery img {
   margin-left: 10px;
@@ -237,10 +387,23 @@ body {
   right: 0;
   bottom: 170px;
 }
+@media screen and (max-width: 576px) {
+  .container-gallery__button {
+    position: static;
+    margin: 0 0 60px 200px;
+  }
+}
 
 .container-subscribe {
   padding: 70px 0;
   background-image: url(../img/subscribe-background.png);
+}
+@media screen and (max-width: 576px) {
+  .container-subscribe {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+  }
 }
 .container-subscribe__text {
   padding-left: 70px;
@@ -248,9 +411,20 @@ body {
 .container-subscribe__title {
   font-size: 40px;
 }
+@media screen and (max-width: 576px) {
+  .container-subscribe__title {
+    padding-top: 25px;
+  }
+}
 .container-subscribe__subtitle {
   width: 564px;
   height: 54px;
+}
+@media screen and (max-width: 576px) {
+  .container-subscribe__subtitle {
+    font-size: 14px;
+    width: 450px;
+  }
 }
 .container-subscribe__input {
   width: 570px;
@@ -259,12 +433,17 @@ body {
   border: 1px solid #262626;
   margin-right: 30px;
 }
+@media screen and (max-width: 576px) {
+  .container-subscribe__input {
+    width: 450px;
+    margin-top: 15px;
+  }
+}
 .container-subscribe__button {
   background-color: #96b92c;
 }
 
 .blog-container {
-  height: 864px;
   background-color: #b07cf7;
   padding: 40px 70px 54px 70px;
   color: #fff;
@@ -274,16 +453,34 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 576px) {
+  .header__title {
+    font-size: 40px;
+  }
+}
 .header__subtitle {
   width: 570px;
   height: 63px;
   text-align: center;
   margin: 0 auto;
 }
+@media screen and (max-width: 576px) {
+  .header__subtitle {
+    font-size: 14px;
+    width: 450px;
+  }
+}
 
 .wrapper {
   display: flex;
   justify-content: space-around;
+}
+@media screen and (max-width: 576px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .wrapper .content {
   width: 370px;
@@ -362,9 +559,19 @@ body {
   text-align: center;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 576px) {
+  .contact-container .contacts-form__title {
+    font-size: 40px;
+  }
+}
 .contact-container .contacts-form__subtitle {
   color: #262626;
   text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .contact-container .contacts-form__subtitle {
+    font-size: 14px;
+  }
 }
 
 .contacts-wrapper {
@@ -372,6 +579,12 @@ body {
   grid-template-columns: 1fr 1fr;
   margin: 0 160px;
   margin-top: 30px;
+}
+@media screen and (max-width: 576px) {
+  .contacts-wrapper {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
 }
 .contacts-wrapper .form__input {
   width: 500px;
@@ -429,9 +642,19 @@ input:-moz-placeholder {
   height: 20px;
   font-weight: bold;
 }
+@media screen and (max-width: 576px) {
+  .contacts__title {
+    margin-left: 0;
+  }
+}
 .contacts__subtitle {
   font-size: 15px;
   padding: 0;
+}
+@media screen and (max-width: 576px) {
+  .contacts__subtitle {
+    margin-left: 0;
+  }
 }
 
 .footer {
@@ -444,6 +667,11 @@ input:-moz-placeholder {
 .footer__subtitle {
   font-size: 15px;
   color: #b9b9b9;
+}
+@media screen and (max-width: 576px) {
+  .footer__subtitle {
+    font-size: 12px;
+  }
 }
 .footer__logo {
   font-size: 25px;

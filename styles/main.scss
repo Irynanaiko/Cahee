@@ -37,6 +37,31 @@
         font-weight: 400;
         font-family: 'Pacifico', cursive;
     }
+
+    &__toggle-btn {
+        display: none;
+        font-size: 32px;
+        color: $main-color;
+        cursor: pointer;
+
+        &:hover {
+            color: darken($main-color, 10%);
+        }
+
+        .hamburger-menu {
+            display: inline-block;
+        }
+
+        .close {
+            display: none;
+        }
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            display: flex;
+            align-items: center;
+            margin-left: 270px;
+        }
+    }
 }
 
 .nav {
@@ -57,7 +82,6 @@
     &__link {
         width: 100px;
         height: 15px;
-        height: 15px;
         font-size: 16px;
         line-height: 25px;
         color: $main-color;
@@ -71,17 +95,30 @@
             border-top: 3px solid #ff6033;
         }
     }
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        display: none;
+    }
 }
 
 .big-screen {
+
     &__wrapper {
         padding: 110px 70px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            text-align: center;
+        }
     }
 
     &__title {
         @extend %title;
 
         color: $main-color;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            line-height: 80px;
+        }
     }
 
     &__subtitle {
@@ -91,6 +128,10 @@
         height: 69px;
         color: $main-color;
         padding-top: 30px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            margin-bottom: 50px;
+        }
     }
 
     &__button {
@@ -100,7 +141,6 @@
 
 .scroll {
     text-align: center;
-    padding: 110px 30px;
 }
 
 // about us
@@ -108,11 +148,19 @@
     background-image: radial-gradient(circle at center, #00c3c3 0%, #00b8b7 32%, #00afae 68%, #009f9f 100%);
     display: flex;
 
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        text-align: center;
+    }
+
     &__title {
         @extend %title;
 
         color: $accent-color;
         padding-top: 210px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 40px;
+        }
     }
 
     &__subtitle {
@@ -122,6 +170,16 @@
         height: 202px;
         color: $accent-color;
         margin-top: 30px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 14px;
+        }
+    }
+
+    &__img {
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 400%;
+        }
     }
 }
 
@@ -134,8 +192,34 @@
     color: $accent-color;
     position: relative;
 
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        flex-direction: column;
+    }
+
+    &__text {
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            order: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding-top: 30px;
+        }
+    }
+
+    & .service-img {
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 150px;
+        }
+    }
+
     &__wrapper {
         margin: 80px 0;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            margin: 0 auto;
+            padding: 20px 0;
+        }
     }
 
     &__title {
@@ -144,6 +228,12 @@
         position: absolute;
         margin: 0;
         top: 50%;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 40px;
+            display: inline-block;
+            position: static;
+        }
     }
 
     &__list {
@@ -175,6 +265,10 @@
         &:not(:last-child) {
             margin-bottom: 10px;
         }
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -187,19 +281,27 @@
     position: absolute;
     margin: auto;
     right: 0;
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: 32px;
+    }
 }
+
 
 // gallery
 .container-gallery {
     background-color: #ffe92f;
     padding-top: 45px;
     position: relative;
-    height: 1536px;
 
     &__title {
         @extend %title;
 
         text-align: center;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 40px;
+        }
     }
 
     &__subtitle {
@@ -210,6 +312,11 @@
         text-align: center;
         padding: 40px 0px;
         margin: 0 auto;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 14px;
+            width: 80%;
+        }
     }
 
     &__img {
@@ -221,6 +328,41 @@
 
     &__img-1 {
         display: flex;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            flex-direction: column;
+            width: 40%;
+        }
+    }
+
+    &__img01 {
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 400px;
+        }
+    }
+
+    &__img02 {
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 400px;
+        }
+    }
+
+    &__img03 {
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 400px;
+        }
+    }
+
+    &__img04 {
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 400px;
+        }
+    }
+
+    &__img05 {
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 400px;
+        }
     }
 
     & img {
@@ -234,6 +376,12 @@
         left: 0;
         right: 0;
         bottom: 170px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            position: static;
+            margin: 0 0 60px 200px;
+        }
+
     }
 }
 
@@ -241,6 +389,12 @@
 .container-subscribe {
     padding: 70px 0;
     background-image: url(../img/subscribe-background.png);
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 80%;
+    }
 
     &__text {
         padding-left: 70px;
@@ -250,6 +404,10 @@
         @extend %title;
 
         font-size: 40px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            padding-top: 25px;
+        }
     }
 
     &__subtitle {
@@ -257,6 +415,11 @@
 
         width: 564px;
         height: 54px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 14px;
+            width: 450px;
+        }
     }
 
     &__input {
@@ -265,6 +428,11 @@
         background-color: rgba(38, 38, 38, 0);
         border: 1px solid #262626;
         margin-right: 30px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            width: 450px;
+            margin-top: 15px;
+        }
     }
 
     &__button {
@@ -274,7 +442,7 @@
 
 // blog
 .blog-container {
-    height: 864px;
+    // height: 864px;
     background-color: #b07cf7;
     padding: 40px 70px 54px 70px;
     color: $accent-color;
@@ -286,6 +454,10 @@
 
         text-align: center;
         margin-bottom: 50px;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 40px;
+        }
     }
 
     &__subtitle {
@@ -295,12 +467,23 @@
         height: 63px;
         text-align: center;
         margin: 0 auto;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 14px;
+            width: 450px;
+        }
     }
 }
 
 .wrapper {
     display: flex;
     justify-content: space-around;
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     & .content {
         width: 370px;
@@ -386,6 +569,10 @@
             color: $main-color;
             text-align: center;
             margin-bottom: 30px;
+
+            @media screen and (max-width: map-get($breakpoints, sm)) {
+                font-size: 40px;
+            }
         }
 
         &__subtitle {
@@ -393,6 +580,10 @@
 
             color: $main-color;
             text-align: center;
+
+            @media screen and (max-width: map-get($breakpoints, sm)) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -402,6 +593,11 @@
     grid-template-columns: 1fr 1fr;
     margin: 0 160px;
     margin-top: 30px;
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
 
     & .form {
         &__input {
@@ -460,6 +656,7 @@ input:-moz-placeholder {
 }
 
 .contacts {
+
     &__title {
         @extend %left;
 
@@ -469,6 +666,10 @@ input:-moz-placeholder {
         padding: 0;
         height: 20px;
         font-weight: bold;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            margin-left: 0;
+        }
     }
 
     &__subtitle {
@@ -476,6 +677,10 @@ input:-moz-placeholder {
 
         font-size: 15px;
         padding: 0;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            margin-left: 0;
+        }
     }
 }
 
@@ -489,6 +694,10 @@ input:-moz-placeholder {
     &__subtitle {
         font-size: 15px;
         color: #b9b9b9;
+
+        @media screen and (max-width: map-get($breakpoints, sm)) {
+            font-size: 12px;
+        }
     }
 
     &__logo {
